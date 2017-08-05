@@ -11,7 +11,10 @@ public class Calculate {
 		synchronized (b) {
 			System.out.println("等待对象b完成计算。。。");
 			// 当前线程A等待
-			b.wait();
+			while(b.total == 0) {
+				b.wait();
+			}
+			
 			System.out.println("b对象计算的总和是：" + b.total);
 		}
 	}
@@ -22,7 +25,7 @@ public class Calculate {
  * 
  */
 class ThreadB extends Thread {
-	int total;
+	int total = 0;
 
 	public void run() {
 		synchronized (this) {
