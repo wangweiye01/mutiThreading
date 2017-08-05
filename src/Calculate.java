@@ -1,6 +1,5 @@
 /**
  * 计算输出其他线程锁计算的数据
- * 
  */
 public class Calculate {
 	public static void main(String[] args) throws InterruptedException {

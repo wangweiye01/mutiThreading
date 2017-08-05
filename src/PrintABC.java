@@ -1,5 +1,4 @@
 public class PrintABC implements Runnable {
-
 	private String name;
 	private Object prev;
 	private Object self;
