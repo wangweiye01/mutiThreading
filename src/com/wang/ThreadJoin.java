@@ -1,3 +1,4 @@
+package com.wang;
 
 public class ThreadJoin {
 	public static void main(String[] args) throws InterruptedException {

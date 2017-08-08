@@ -1,3 +1,4 @@
+package com.wang;
 public class PrintABC implements Runnable {
 	private String name;
 	private Object prev;
