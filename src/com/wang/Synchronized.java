@@ -24,7 +24,7 @@ class Thread1 implements Runnable {
 	private String name;
 
 	public Thread1(String name, Integer ticket) {
-		this.name = name;
+		this.name = name;		
 	}
 
 	@Override
@@ -41,6 +41,7 @@ class Thread1 implements Runnable {
 					e.printStackTrace();
 				}
 			}
+			System.out.println("没票了！！！！");
 		}
 	}
 }
