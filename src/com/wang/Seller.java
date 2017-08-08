@@ -3,7 +3,11 @@ package com.wang;
 public class Seller implements Runnable {
 	private String name;
 
-	public Seller(String name) {
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
 		this.name = name;
 	}
 
@@ -12,7 +16,7 @@ public class Seller implements Runnable {
 		// TODO Auto-generated method stub
 		synchronized (this) {
 			if (Synchronized.ticket > 0) {
-				System.out.println("线程" + name + "正在卖票,剩余" + Synchronized.ticket);
+				System.out.println("正在卖票,剩余" + Synchronized.ticket);
 				Synchronized.ticket--;
 				try {
 					Thread.sleep(100);

@@ -4,7 +4,7 @@ public class Synchronized {
 	static Integer ticket = 100;
 
 	public static void main(String[] args) {
-		Seller s = new Seller("s");
+		Seller s = new Seller();
 		Thread t1 = new Thread(s);
 		Thread t2 = new Thread(s);
 		Thread t3 = new Thread(s);
