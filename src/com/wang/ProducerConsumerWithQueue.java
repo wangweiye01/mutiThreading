@@ -37,7 +37,7 @@ public class ProducerConsumerWithQueue {
 			while (true) {
 				try {
 					queue.put(1);
-					System.out.println("向队列取中插入一个元素，队列剩余空间：" + (queueSize - queue.size()));
+					System.out.println("向队列中插入一个元素，队列剩余空间：" + (queueSize - queue.size()));
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
