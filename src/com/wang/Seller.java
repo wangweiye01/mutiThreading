@@ -1,22 +1,30 @@
 package com.wang;
 
 public class Seller implements Runnable {
-	private int ticket = 100;
+    private static Integer ticket;
 
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		synchronized (this) {
-			if (ticket > 0) {
-				System.out.println(Thread.currentThread().getName() + "线程正在卖票,剩余" + ticket);
-				ticket--;
-				try {
-					Thread.sleep(100);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		}
-	}
+    public static void setTicket(Integer ticket) {
+        Seller.ticket = ticket;
+    }
+
+    private String name;
+
+    public Seller(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void run() {
+        synchronized (this.getClass()) {
+            if (ticket > 0) {
+                System.out.println(name + "正在卖票,剩余" + ticket);
+                ticket--;
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 }
