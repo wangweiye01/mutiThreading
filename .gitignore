@@ -4,3 +4,6 @@
 .project
 /settings/
 /bin/
+.idea/
+mutiThreading.iml
+out/
