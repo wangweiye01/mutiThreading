@@ -2,7 +2,7 @@ package com.wang;
 
 public class Synchronized {
     public static void main(String[] args) {
-        Integer ticket = 10;
+        Integer ticket = 8;
 
         Seller.ticket = ticket;
 

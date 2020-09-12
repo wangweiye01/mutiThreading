@@ -13,13 +13,14 @@ public class Seller implements Runnable {
     public void run() {
         synchronized (this.getClass()) {
             if (ticket > 0) {
-                System.out.println(name + "正在卖票,剩余" + ticket);
-                ticket--;
+                System.out.println("老" + name + "正在卖票,剩余" + --ticket);
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+            } else {
+                System.out.println(name + "没有票卖了");
             }
         }
     }
