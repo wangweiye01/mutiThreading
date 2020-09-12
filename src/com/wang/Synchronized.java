@@ -4,7 +4,7 @@ public class Synchronized {
     public static void main(String[] args) {
         Integer ticket = 10;
 
-        Seller.setTicket(ticket);
+        Seller.ticket = ticket;
 
         Thread t1 = new Thread(new Seller("赵"));
         Thread t2 = new Thread(new Seller("钱"));

@@ -1,11 +1,7 @@
 package com.wang;
 
 public class Seller implements Runnable {
-    private static Integer ticket;
-
-    public static void setTicket(Integer ticket) {
-        Seller.ticket = ticket;
-    }
+    public static Integer ticket;
 
     private String name;
 
