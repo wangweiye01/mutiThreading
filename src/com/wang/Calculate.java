@@ -33,7 +33,7 @@ class ThreadB extends Thread {
 				total += i;
 			}
 			// （完成计算了）唤醒在此对象监视器上等待的单个线程，在本例中线程A被唤醒
-			notify();
+			this.notify();
 			System.out.println("计算完成");
 		}
 	}
